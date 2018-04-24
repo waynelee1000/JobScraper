@@ -1,0 +1,7 @@
+for div in soup.find_all('div'):
+    for title in div.find_all('h2'):
+        print(title.text)
+        for company in title.find_all('span',{'class': 'company'}):
+            print (company.text)
+        for a in title.find_all('a', href=True):
+        print(a.get('href'))
